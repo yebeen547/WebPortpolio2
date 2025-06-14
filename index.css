@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('img/MainBackground.jpg');
+  background-size: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: skyblue;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo a {
+  text-decoration: none;
+}
+
+#logo h1 {
+  margin: 0;
+  color: rgb(7, 1, 91);
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+#menu a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover {
+  color: #0056b3;
+}
+
+main.contents {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 40px;
+  border-radius: 20px;
+}
+
+main h1 {
+  color: rgb(7, 1, 91);
+}
+
+main p {
+  font-size: 20px;
+}
+#clock {
+  display: inline-block;
+  margin: 30px auto 10px;
+  padding: 4px 10px;
+  background-color: rgba(173, 216, 230, 0.7);
+  color: navy;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(135, 206, 235, 0.6);
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.animation {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+#tech-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px auto;
+  flex-wrap: wrap;
+}
+
+.tech-section {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 60px 20px;
+  background-color: #f0f8ff00;
+}
+
+.tech-box {
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 128, 255, 0.2);
+  text-align: center;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+}
+
+.tech-box.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* 다크모드일 때 */
+body.dark-mode {
+  background-color: #535252;
+  color: #030303;
+}
+
+header.dark-mode,
+nav.dark-mode,
+.tech-box.dark-mode {
+  background-color: #070707;
+  color: #f0f0f0;
+}
+
+.tech-box.dark-mode {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+#darkToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.dark-mode #darkToggle {
+  background: #333;
+  color: white;
+}
+
+/* 🌙 다크모드 기본 스타일 */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+.dark-mode #menu a {
+  color: #90caf9;
+}
+
+.dark-mode #menu a:hover {
+  color: #42a5f5;
+}
+
+/* ✨ 헤더와 네비게이션 다크모드 */
+.dark-mode header,
+.dark-mode nav {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* 🌟 다크모드 토글 버튼 글로우 효과 */
+#darkToggle {
+  transition: all 0.3s ease;
+}
+
+.dark-mode #darkToggle {
+  box-shadow: 0 0 10px 2px #90caf9;
+  background-color: #222;
+  color: #90caf9;
+  border: 1px solid #90caf9;
+}
+
+/* 🔗 링크 색 */
+.dark-mode a {
+  color: #90caf9;
+}
+
+/* 💻 기술 박스 스타일 */
+.dark-mode .tech-box {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: #f0f0f0;
+}
+
+/* ⏰ 시계 색 */
+.dark-mode #clock {
+  color: #90caf9;
+}
+
+/* 🌌 별 반짝이 배경 */
+body.dark-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: star-fade 2s ease-in-out infinite alternate;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* ✨ 별 깜빡이기 애니메이션 */
+@keyframes star-fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+/* 💫 부드러운 전환 효과 */
+body,
+header,
+nav,
+button,
+.tech-box {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*반응형 메뉴바 */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}

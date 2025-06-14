@@ -1,0 +1,214 @@
+/* 🌕 기본 배경 및 전체 초기화 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 🔵 헤더 */
+header {
+  background-color: skyblue;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo a {
+  text-decoration: none;
+}
+
+#logo h1 {
+  margin: 0;
+  color: rgb(7, 1, 91);
+}
+
+/* 메뉴 */
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover {
+  color: #0056b3;
+}
+/* 🌈 다크모드 토글 버튼 */
+#darkToggle {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* 📄 메인 콘텐츠 */
+#contents {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px skyblue;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contents h1 {
+  color: navy;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* 📷 프로필 이미지 및 소개 */
+.detail img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px skyblue;
+  transition: all 0.3s ease;
+}
+
+.detail p {
+  font-size: 20px;
+  margin: 10px 0;
+  color: navy;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* 🌑 다크모드 전체 */
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode header {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode nav {
+  background-color: transparent;
+}
+
+.dark-mode #darkToggle {
+  box-shadow: 0 0 10px 2px #90caf9;
+  background-color: #222;
+  color: #90caf9;
+  border: 1px solid #90caf9;
+}
+
+.dark-mode #menu a {
+  color: #90caf9;
+}
+
+.dark-mode #menu a:hover {
+  color: #42a5f5;
+}
+
+.dark-mode #contents {
+  background-color: #1e1e1e;
+  box-shadow: 0 10px 20px #90caf9;
+}
+
+.dark-mode section.detail {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.dark-mode section.detail img {
+  border-radius: 50%;
+  border: 2px solid #90caf9;
+  box-shadow: 0 0 8px #90caf9aa;
+}
+
+.dark-mode section.detail p {
+  color: #e0e0e0;
+}
+
+/* 🌌 별 반짝이 배경 */
+body.dark-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: star-fade 2s ease-in-out infinite alternate;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes star-fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+/* 💫 부드러운 전환 효과 */
+body,
+header,
+nav,
+button,
+#contents,
+.detail img,
+.detail p {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 📱 반응형 스타일 */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .detail {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .detail img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .detail p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
