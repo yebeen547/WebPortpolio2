@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-/* 🌕 기본 배경 및 전체 초기화 */
+/* 기본 배경 및 전체 초기화 */
 body {
   margin: 0;
   padding: 0;
@@ -12,7 +11,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🔵 헤더 */
+/* 헤더 */
 header {
   background-color: skyblue;
   padding: 30px;
@@ -50,7 +49,7 @@ header {
   color: #0056b3;
 }
 
-/* 🌈 다크모드 토글 버튼 */
+/* 다크모드 토글 버튼 */
 #darkToggle {
   padding: 8px 14px;
   border: none;
@@ -65,7 +64,7 @@ header {
   z-index: 1000;
 }
 
-/* 📅 표 전체 스타일 */
+/* 표 전체 스타일 */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -77,14 +76,14 @@ table {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 📌 표 머리글 스타일 */
+/* 표 머리글 스타일 */
 thead th {
   font-weight: bold;
   padding: 15px;
   border-bottom: 1px solid navy;
 }
 
-/* ⏰ 왼쪽 시간 컬럼 */
+/* 왼쪽 시간 컬럼 */
 .color {
   background-color: rgb(182, 220, 236);
   color: navy;
@@ -92,7 +91,7 @@ thead th {
   text-align: center;
 }
 
-/* 📄 셀 */
+/* 셀 */
 tbody th,
 tbody td {
   padding: 10px;
@@ -108,7 +107,7 @@ tbody td:not(:empty) {
   border-radius: 4px;
 }
 
-/* 🌑 다크모드 스타일 */
+/* 다크모드 스타일 */
 body.dark-mode {
   background-color: #121212;
   color: #f0f0f0;
@@ -159,7 +158,7 @@ body.dark-mode {
   color: #f0f0f0;
 }
 
-/* 🌌 별 배경 */
+/* 별 배경 */
 body.dark-mode::before {
   content: '';
   position: fixed;
@@ -184,7 +183,7 @@ body.dark-mode::before {
   }
 }
 
-/* 📱 반응형 */
+/* 반응형 */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -207,213 +206,3 @@ body.dark-mode::before {
     padding: 8px;
   }
 }
-=======
-/* 🌕 기본 배경 및 전체 초기화 */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  background-size: 1000px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: navy;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* 🔵 헤더 */
-header {
-  background-color: skyblue;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#logo a {
-  text-decoration: none;
-}
-
-#logo h1 {
-  margin: 0;
-  color: rgb(7, 1, 91);
-}
-
-/* 메뉴 */
-#menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-#menu a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-#menu a:hover {
-  color: #0056b3;
-}
-
-/* 🌈 다크모드 토글 버튼 */
-#darkToggle {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
-}
-
-/* 📅 표 전체 스타일 */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 40px auto;
-  max-width: 900px;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* 📌 표 머리글 스타일 */
-thead th {
-  font-weight: bold;
-  padding: 15px;
-  border-bottom: 1px solid navy;
-}
-
-/* ⏰ 왼쪽 시간 컬럼 */
-.color {
-  background-color: rgb(182, 220, 236);
-  color: navy;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* 📄 셀 */
-tbody th,
-tbody td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid skyblue;
-}
-
-/* 수업 있는 칸 하이라이트 */
-tbody th:not(.color):not(:empty),
-tbody td:not(:empty) {
-  background-color: rgb(213, 228, 234);
-  color: navy;
-  border-radius: 4px;
-}
-
-/* 🌑 다크모드 스타일 */
-body.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.dark-mode header {
-  background-color: #1e1e1e;
-}
-
-.dark-mode #darkToggle {
-  background-color: #222;
-  color: #90caf9;
-  border: 1px solid #90caf9;
-  box-shadow: 0 0 10px 2px #90caf9;
-}
-
-.dark-mode #menu a {
-  color: #90caf9;
-}
-
-.dark-mode #menu a:hover {
-  color: #42a5f5;
-}
-
-.dark-mode table {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-}
-
-.dark-mode thead th {
-  border-bottom: 1px solid #90caf9;
-  color: #90caf9;
-}
-
-.dark-mode .color {
-  background-color: #2c3e50;
-  color: #90caf9;
-}
-
-.dark-mode tbody th,
-.dark-mode tbody td {
-  border: 1px solid #90caf9;
-}
-
-.dark-mode tbody th:not(.color):not(:empty),
-.dark-mode tbody td:not(:empty) {
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-}
-
-/* 🌌 별 배경 */
-body.dark-mode::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 3px 3px;
-  animation: star-fade 2s ease-in-out infinite alternate;
-  opacity: 0.2;
-  z-index: 0;
-}
-
-@keyframes star-fade {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 0.4;
-  }
-}
-
-/* 📱 반응형 */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #menu {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  table {
-    font-size: 12px;
-  }
-
-  thead th,
-  .color {
-    font-size: 13px;
-    padding: 8px;
-  }
-}
->>>>>>> e258804 (작업 중인 내용 저장)
