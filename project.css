@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-/* 🌕 기본 설정 */
+/* 기본 설정 */
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🔵 헤더 */
+/* 헤더 */
 header {
   background-color: skyblue;
   padding: 30px;
@@ -45,7 +44,7 @@ header {
   color: #0056b3;
 }
 
-/* 🌈 다크모드 버튼 */
+/* 다크모드 버튼 */
 #darkToggle {
   padding: 8px 14px;
   border: none;
@@ -60,7 +59,7 @@ header {
   z-index: 10;
 }
 
-/* 📁 콘텐츠 */
+/* 콘텐츠 */
 #contents {
   max-width: 700px;
   margin: 50px auto;
@@ -100,7 +99,7 @@ header {
   color: #ff3399;
 }
 
-/* 🌑 다크모드 전체 */
+/* 다크모드 전체 */
 .dark-mode {
   background-color: #121212;
   color: #f0f0f0;
@@ -147,7 +146,7 @@ header {
   color: #ff66cc;
 }
 
-/* 🌌 별 배경 */
+/* 별 배경 */
 body.dark-mode::before {
   content: '';
   position: fixed;
@@ -172,7 +171,7 @@ body.dark-mode::before {
   }
 }
 
-/* 📱 반응형 */
+/* 반응형 */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -186,7 +185,7 @@ body.dark-mode::before {
   }
 }
 
-/* 💫 부드러운 전환 효과 */
+/* 부드러운 전환 효과 */
 body,
 header,
 nav,
@@ -197,203 +196,3 @@ button,
 .website a {
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
-=======
-/* 🌕 기본 설정 */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* 🔵 헤더 */
-header {
-  background-color: skyblue;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#logo a {
-  text-decoration: none;
-}
-
-#logo h1 {
-  margin: 0;
-  color: rgb(7, 1, 91);
-}
-
-/* 메뉴 */
-#menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-#menu a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-#menu a:hover {
-  color: #0056b3;
-}
-
-/* 🌈 다크모드 버튼 */
-#darkToggle {
-  padding: 8px 14px;
-  border: none;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-}
-
-/* 📁 콘텐츠 */
-#contents {
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px skyblue;
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* 각 웹사이트 박스 */
-.website {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: rgba(135, 207, 235, 0.3);
-  border: 2px solid skyblue;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, border 0.3s ease;
-}
-
-.website h2 {
-  color: navy;
-  font-size: 24px;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
-}
-
-.website a {
-  color: rgb(254, 151, 169);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.website a:hover {
-  text-decoration: underline;
-  color: #ff3399;
-}
-
-/* 🌑 다크모드 전체 */
-.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.dark-mode header {
-  background-color: #1e1e1e;
-}
-
-.dark-mode #darkToggle {
-  background-color: #222;
-  color: #90caf9;
-  border: 1px solid #90caf9;
-  box-shadow: 0 0 10px 2px #90caf9;
-}
-
-.dark-mode #menu a {
-  color: #90caf9;
-}
-
-.dark-mode #menu a:hover {
-  color: #42a5f5;
-}
-
-.dark-mode #contents {
-  background-color: #1e1e1e;
-  box-shadow: 0 10px 20px #90caf9;
-}
-
-.dark-mode .website {
-  background-color: rgba(144, 202, 249, 0.1);
-  border: 2px solid #90caf9;
-}
-
-.dark-mode .website h2 {
-  color: #bbdefb;
-}
-
-.dark-mode .website a {
-  color: #f48fb1;
-}
-
-.dark-mode .website a:hover {
-  color: #ff66cc;
-}
-
-/* 🌌 별 배경 */
-body.dark-mode::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 3px 3px;
-  animation: star-fade 2s ease-in-out infinite alternate;
-  opacity: 0.2;
-  z-index: 0;
-}
-
-@keyframes star-fade {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 0.4;
-  }
-}
-
-/* 📱 반응형 */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #menu {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-}
-
-/* 💫 부드러운 전환 효과 */
-body,
-header,
-nav,
-button,
-#contents,
-.website,
-.website h2,
-.website a {
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
->>>>>>> e258804 (작업 중인 내용 저장)
