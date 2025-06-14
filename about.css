@@ -1,4 +1,4 @@
-/* 🌕 기본 배경 및 전체 초기화 */
+/* 기본 배경 및 전체 초기화 */
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🔵 헤더 */
+/* 헤더 */
 header {
   background-color: skyblue;
   padding: 30px;
@@ -43,7 +43,7 @@ header {
 #menu a:hover {
   color: #0056b3;
 }
-/* 🌈 다크모드 토글 버튼 */
+/* 다크모드 토글 버튼 */
 #darkToggle {
   padding: 8px 14px;
   border: none;
@@ -57,7 +57,7 @@ header {
   right: 10px;
 }
 
-/* 📄 메인 콘텐츠 */
+/* 메인 콘텐츠 */
 #contents {
   max-width: 700px;
   margin: 50px auto;
@@ -75,7 +75,7 @@ header {
   margin-bottom: 30px;
 }
 
-/* 📷 프로필 이미지 및 소개 */
+/* 프로필 이미지 및 소개 */
 .detail img {
   width: 150px;
   height: 200px;
@@ -94,7 +94,7 @@ header {
   transition: color 0.3s ease;
 }
 
-/* 🌑 다크모드 전체 */
+/* 다크모드 전체 */
 .dark-mode {
   background-color: #121212;
   color: #f0f0f0;
@@ -148,7 +148,7 @@ header {
   color: #e0e0e0;
 }
 
-/* 🌌 별 반짝이 배경 */
+/* 별 반짝이 배경 */
 body.dark-mode::before {
   content: '';
   position: fixed;
@@ -173,7 +173,7 @@ body.dark-mode::before {
   }
 }
 
-/* 💫 부드러운 전환 효과 */
+/* 부드러운 전환 효과 */
 body,
 header,
 nav,
@@ -184,7 +184,7 @@ button,
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 📱 반응형 스타일 */
+/* 반응형 스타일 */
 @media (max-width: 768px) {
   header {
     flex-direction: column;

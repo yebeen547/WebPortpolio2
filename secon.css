@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 🌕 기본 초기화 및 배경 설정 */
 body {
   margin: 0;
@@ -220,3 +221,227 @@ blockquote {
     font-size: 16px;
   }
 }
+=======
+/* 🌕 기본 초기화 및 배경 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #001f3f;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-size: 1000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* 🔷 헤더 */
+header {
+  background-color: #87ceeb;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+#logo h1 {
+  margin: 0;
+  color: #001f3f;
+}
+
+#logo a {
+  text-decoration: none;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#menu a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover {
+  color: #0056b3;
+}
+
+/* 🌈 다크모드 토글 버튼 */
+#darkToggle {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* 🧾 콘텐츠 카드 */
+#contents {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(135, 206, 235, 0.4);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contents h1 {
+  font-size: 36px;
+  color: #001f3f;
+  margin-bottom: 20px;
+}
+
+#contents p {
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.7;
+}
+
+#contents b {
+  color: #0074d9;
+}
+
+/* 💬 인용구 */
+blockquote {
+  background-color: #f0faff;
+  border-left: 5px solid #0074d9;
+  padding: 20px;
+  margin-top: 40px;
+  font-style: italic;
+  color: #444;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 116, 217, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* 🌑 다크모드 스타일 */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+.dark-mode #menu a {
+  color: #90caf9;
+}
+
+.dark-mode #menu a:hover {
+  color: #42a5f5;
+}
+
+.dark-mode #darkToggle {
+  box-shadow: 0 0 10px 2px #90caf9;
+  background-color: #222;
+  color: #90caf9;
+  border: 1px solid #90caf9;
+}
+
+.dark-mode #contents {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 8px 20px rgba(144, 202, 249, 0.2);
+}
+
+.dark-mode #contents h1 {
+  color: #90caf9;
+}
+
+.dark-mode #contents p {
+  color: #cccccc;
+}
+
+.dark-mode #contents b {
+  color: #64b5f6;
+}
+
+.dark-mode blockquote {
+  background-color: #2a2a2a;
+  border-left: 5px solid #64b5f6;
+  color: #cccccc;
+  box-shadow: 0 4px 12px rgba(100, 181, 246, 0.1);
+}
+
+/* 🌌 다크모드 별 반짝이 효과 */
+body.dark-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  animation: star-fade 2s ease-in-out infinite alternate;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes star-fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+/* 💫 부드러운 전환 */
+body,
+header,
+nav,
+button,
+#contents,
+blockquote {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 📱 반응형 스타일 */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  #contents {
+    padding: 25px;
+    margin: 40px 20px;
+  }
+
+  #contents h1 {
+    font-size: 28px;
+  }
+
+  #contents p {
+    font-size: 16px;
+  }
+}
+>>>>>>> e258804 (작업 중인 내용 저장)
